@@ -34,7 +34,7 @@ header {
    height: 100%; 
    object-fit: cover;
    opacity: 0.5;
-   animation: zoom 25s ;
+   animation: zoom 10s ;
 }
 /* Efeito zoom --> IMG */
 @keyframes zoom {
@@ -60,7 +60,7 @@ header {
    font-weight: 200;
    text-shadow: .2rem .3rem 2px rgba(0, 0, 0, .4);
    line-height: 3.5rem;
-   margin-bottom: 2rem;
+   margin-bottom: 1.3rem;
    opacity: 0;
    animation: moveBanner 2.7s 0.4s forwards;
 }
@@ -71,7 +71,7 @@ header {
    color: #ffffff;
    font-size: 2rem;
    text-shadow: .2rem .2rem  rgba(0, 0, 0, .4);
-   margin-bottom: 2rem;
+   margin-bottom: 1.8rem;
    opacity: 0;
    animation: moveBanner 2.5s 0.7s forwards;
 }
