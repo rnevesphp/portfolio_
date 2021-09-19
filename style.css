@@ -2,4 +2,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;800&family=Josefin+Slab:ital,wght@0,100;0,500;0,600;1,100;1,200;1,700&family=Mulish:ital,wght@0,200;0,400;0,600;1,200;1,300;1,600&display=swap');
 
 /* FONT AWESOME */ 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"); 
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-size: 16px;
+}
+
+/* formatação do header */
+header {
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   position: relative;
+}
+
+/* formatação background do header */
+.img-wrapper {
+   width: 100%;
+   height: 100%; 
+   overflow: hidden;
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-wrapper img{
+   width: 100%;
+   height: 100%; 
+   object-fit: cover;
+   opacity: 0.5;
+   animation: zoom 25s ;
+}
+/* Efeito zoom --> IMG */
+@keyframes zoom {
+   0% { 
+      transform: scale(1.3);
+   }
+   100%  {
+      transform: scale(1);
+   }
+}
+
+/* formatação dos títulos e informações */ 
+.banner { 
+   position: absolute;
+   top: 30%;
+   left: 15%;
+}
+
+.banner h1 { 
+   color: #ffffff;
+   font-size: 3.5rem;
+   font-family: "Baloo Da 2", Jetbrains Mono;
+   font-weight: 200;
+   text-shadow: .2rem .3rem 2px rgba(0, 0, 0, .4);
+   line-height: 3.5rem;
+   margin-bottom: 2rem;
+   opacity: 0;
+   animation: moveBanner 2.7s 0.4s forwards;
+}
+
+/* Formatação do paragrafo */
+.banner p { 
+   font-family: "Josefin Slab", Jetbrains Mono;
+   color: #ffffff;
+   font-size: 2rem;
+   text-shadow: .2rem .2rem  rgba(0, 0, 0, .4);
+   margin-bottom: 2rem;
+   opacity: 0;
+   animation: moveBanner 2.5s 0.7s forwards;
+}
+
+/* Formatação botão */
+.banner button { 
+   font-family: "Muli", Jetbrains Mono ;
+   color: #ffffff ; 
+   text-transform: uppercase;
+   letter-spacing: .1rem;
+   background: #6a3093;  
+   background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   padding: 1rem 3rem;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   opacity: 0;
+   animation: moveBanner 2.3s 0.9s forwards;
+}
+
+/* Animation of button */
+.banner button:hover {
+   opacity: 0.8;
+   color: #000;
+}
+
+/* animation header */
+@keyframes moveBanner { 
+   0% {
+      transform: translateY(10rem) rotateY(-30deg); 
+   }
+   100% {
+      transform: translateY(0) rotateY(0);
+      opacity: 1; 
+   }  
+}
