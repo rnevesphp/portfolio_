@@ -11,13 +11,18 @@
    text-decoration: none;
 }
 
+:root { 
+   --font-primary: "Baloo Da 2", Jetbrains Mono; 
+   --font-secundary: "Josefin Slab", Jetbrains Mono;
+   --font-action: "Muli", Jetbrains Mono; 
+}
+
 body {
    font-size: 16px;
 }
 
 /* Formatação barras --> menu */ 
 .hamburguer { 
-   /*background-color: red;*/ 
    width: 2rem;
    height: 2rem;
    position: fixed;
@@ -28,6 +33,11 @@ body {
    flex-direction: column;
    justify-content: space-evenly;
    cursor: pointer;
+   transition: all 1s;
+}
+
+.show-menu .hamburguer{ 
+   right: 16rem;
 }
 
 .line { 
@@ -35,9 +45,22 @@ body {
    height: .1rem;
    background-color: #ffffff;
    box-shadow: 0.1rem 0.1rem 1px #000;
-   
+   transition: transform 1s;
 }
 
+/* Formatação barras --> menu em formato X */
+.show-menu #line1 { 
+   transform: rotate(45deg) translate(.3rem, .45rem);
+}
+
+.show-menu #line2 { 
+   opacity: 0;
+   visibility: hidden;
+}
+
+.show-menu #line3 { 
+   transform: rotate(-45deg) translate(.3rem, -.45rem);
+}
 
 /* formatação do header */
 header {
@@ -82,7 +105,7 @@ header {
 .banner h1 { 
    color: #ffffff;
    font-size: 3.5rem;
-   font-family: "Baloo Da 2", Jetbrains Mono;
+   font-family: var(--font-primary); 
    font-weight: 200;
    text-shadow: .2rem .3rem 2px rgba(0, 0, 0, .4);
    line-height: 3.5rem;
@@ -93,7 +116,7 @@ header {
 
 /* Formatação do paragrafo */
 .banner p { 
-   font-family: "Josefin Slab", Jetbrains Mono;
+   font-family: var(--font-primary); 
    color: #ffffff;
    font-size: 2rem;
    text-shadow: .2rem .2rem  rgba(0, 0, 0, .4);
@@ -104,7 +127,7 @@ header {
 
 /* Formatação botão */
 .banner button { 
-   font-family: "Muli", Jetbrains Mono ;
+   font-family: var(--font-action);
    color: #ffffff ; 
    text-transform: uppercase;
    letter-spacing: .1rem;
@@ -123,6 +146,7 @@ header {
 .banner button:hover {
    opacity: 0.8;
    color: #000;
+   transition: 1s;
 }
 
 /* animation header */
@@ -143,21 +167,62 @@ header {
    background-color: #fff;
    position: fixed;
    top: 0;
+   right: -20rem;
+   transition: all 1s;
+}
+
+.show-menu .sidebar { 
    right: 0;
 }
 
+/* Posição dos links de interesses */
 .menu { 
    position: absolute;
-   top: 40%;
+   top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
 
 .menu-item { 
    text-align: center;
-
+   margin-bottom: .6rem;
 }
 
 .menu-link { 
-   font-family: Jetbrains Mono;
+   font-family: var(--font-action);
+   font-size: 1.7rem;
+   color: #555;
+   transition: color 1s;
+}
+
+.menu-link:hover { 
+   color: #6a3093;
+}
+
+/* Barra com links das redes sociais */
+.social-media { 
+   position: absolute;
+   bottom: 2rem;
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;  
+}
+
+/* Formatação icones do menu de naevagação */
+.social-media i{ 
+   background-color: #6a3093; 
+   color: rgba(255, 255, 255, 1);
+   width: 2.5rem;
+   height: 2.5rem;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   transition: background-color 0.8s;
+}
+
+.social-media i:hover { 
+   background-color: #a044ff;
+   
 }
