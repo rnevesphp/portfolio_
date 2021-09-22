@@ -7,11 +7,37 @@
 * {
    margin: 0;
    padding: 0;
+   list-style: none;
+   text-decoration: none;
 }
 
 body {
    font-size: 16px;
 }
+
+/* Formatação barras --> menu */ 
+.hamburguer { 
+   /*background-color: red;*/ 
+   width: 2rem;
+   height: 2rem;
+   position: fixed;
+   z-index: 100;
+   right: 2rem;
+   top: 2rem; 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   cursor: pointer;
+}
+
+.line { 
+   width: 100%;
+   height: .1rem;
+   background-color: #ffffff;
+   box-shadow: 0.1rem 0.1rem 1px #000;
+   
+}
+
 
 /* formatação do header */
 header {
@@ -108,4 +134,30 @@ header {
       transform: translateY(0) rotateY(0);
       opacity: 1; 
    }  
+}
+
+/* Formatação do menu de navegação */
+.sidebar { 
+   width: 20rem;
+   height: 100vh;
+   background-color: #fff;
+   position: fixed;
+   top: 0;
+   right: 0;
+}
+
+.menu { 
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.menu-item { 
+   text-align: center;
+
+}
+
+.menu-link { 
+   font-family: Jetbrains Mono;
 }
