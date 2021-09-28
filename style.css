@@ -12,9 +12,9 @@
 }
 
 :root { 
-   --font-primary: "Baloo Da 2", Jetbrains Mono; 
-   --font-secundary: "Josefin Slab", Jetbrains Mono;
-   --font-action: "Muli", Jetbrains Mono; 
+   --font-primary: "Baloo Da 2"; 
+   --font-secundary: "Josefin Slab";
+   --font-action: "Mulish"; 
 }
 
 body {
@@ -50,7 +50,7 @@ body {
 
 /* Formatação barras --> menu em formato X */
 .show-menu #line1 { 
-   transform: rotate(45deg) translate(.3rem, .45rem);
+   transform: rotate(45deg) translate(.3rem, .43rem);
 }
 
 .show-menu #line2 { 
@@ -59,7 +59,7 @@ body {
 }
 
 .show-menu #line3 { 
-   transform: rotate(-45deg) translate(.3rem, -.45rem);
+   transform: rotate(-45deg) translate(.2rem, -.43rem);
 }
 
 .hamburguer span { 
@@ -177,6 +177,22 @@ header {
    transition: 1s;
 }
 
+/* Barra de rolagem personalizada */
+/*
+::-webkit-scrollbar { 
+   width: 30px;
+}
+
+::-webkit-scrollbar-track { 
+   background-color: #a244ff8a;
+   border-radius:  30px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+}
+*/
 /* animation header */
 @keyframes moveBanner { 
    0% {
@@ -250,47 +266,133 @@ header {
    transition: background-color 0.8s;
 }
 
+/* formatação efeito barras  */
 .social-media i:hover { 
    background-color: #a044ff;
 }
-
+ /* Posicionamento dos conhecimentos */
 .conhecimentos { 
    display: grid;
    grid-template-columns: repeat(16, 1fr);
-   grid-template-rows: repeat(10, 4rem);
+   grid-template-rows: repeat(8, 5.2rem);
+   row-gap: .5rem;
 }
 
 .conhecimento:nth-child(1){ 
-   grid-column: 4/7;
+   grid-column: 3/7;
    grid-row: 1/3;
 }
 
 .conhecimento:nth-child(2){ 
-   grid-column: 3/6;
+   grid-column: 2/6;
    grid-row: 3/5;
 }
 
 .conhecimento:nth-child(3){ 
-   grid-column: 4/7;
+   grid-column: 3/7;
    grid-row: 5/-1;
 }
 
 .conhecimento:nth-child(4){ 
-   grid-column: 11/14;
+   grid-column: 11/15;
    grid-row: 1/3;
 }
 
 .conhecimento:nth-child(5){ 
-   grid-column: 12/15;
+   grid-column: 12/16;
    grid-row: 3/5;
 }
 
 .conhecimento:nth-child(6){ 
-   grid-column: 11/14;
+   grid-column: 11/15;
    grid-row: 5/-1;
 }
 
 .conhecimento:nth-child(7){ 
-   grid-column: 7 / 10 ;
-   grid-row: 8/10;
+   grid-column: 7 / 11 ;
+   grid-row: 7/8;
+}
+
+/* Formatação da página */
+.sessao-conhecimentos { 
+   background-color: #f4f4f4;
+}
+
+/* Alinhamento do título */
+.sessao-header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/* estilo titulo */
+.sessao-header h1 { 
+   font-family: var(--font-primary);
+   font-size: 3rem;
+   color: #555;
+   border-bottom: solid 3px #a044ff;
+   margin-bottom: 1rem;
+}
+
+/* posicionamento titulo e icones */
+.conhecimento-header {
+   display: flex;
+   align-items: center;
+   color: #555;
+   transition: 500ms;
+}
+
+/* tamanho icones */
+.conhecimento-header i { 
+   font-size: 2.5rem;
+   transition: 500ms;
+}
+/* icones + */
+i.fa-plus:before { 
+   font-size: 1rem;
+   margin-left: .6rem;
+   display: flex;
+   align-items: center;
+}
+
+/* Separação dos icones */
+i.fa-windows::before { 
+   margin-left: .7rem;
+}
+
+/* Formatação h3 */
+.conhecimento-header h3 { 
+   font-family: var(--font-secundary);
+   font-size: 2rem;
+   padding-left: 1rem;
+   transition: 500ms;
+   cursor: pointer;
+}
+
+/* Formatação texto conhecimentos */
+.conhecimento-text {
+   font-family: var(--font-secundary);
+   margin-top: .7rem;
+   color: #555;
+   transition: 500ms;
+   cursor: pointer;
+}
+
+.conhecimento-text:hover {
+   color: #a044ff;
+}
+.conhecimento-header:hover { 
+   color: #a044ff;
+}
+
+/* Posicionamento da imagem */
+.conhecimentos-img-wrapper { 
+   grid-column: 7 / 11;
+   grid-row: 2 / 6 ;
+   width: 100%;
+}
+
+/* ocupação imagem */
+.conhecimentos-img-wrapper img { 
+   object-fit: cover;
+   width: 100%;
 }
