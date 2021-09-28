@@ -359,6 +359,9 @@ i.fa-windows::before {
    margin-left: .7rem;
 }
 
+i.fa-github:before {
+   margin-left: .7rem;
+}
 /* Formatação h3 */
 .conhecimento-header h3 { 
    font-family: var(--font-secundary);
