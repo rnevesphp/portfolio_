@@ -328,16 +328,23 @@ header {
 .sessao-header h1 { 
    font-family: var(--font-primary);
    font-size: 3rem;
-   color: #555;
-   border-bottom: solid 3px #a044ff;
+   color: #6a3093;
+   border-bottom: hidden ;
    margin-bottom: 1rem;
+   transition: 500ms;
 }
+
+.sessao-header h1:hover { 
+   border-bottom: solid 3px #a044ff ; 
+   color: #a044ff;
+}
+
 
 /* posicionamento titulo e icones */
 .conhecimento-header {
    display: flex;
    align-items: center;
-   color: #555;
+   color: #6a3093;
    transition: 500ms;
 }
 
@@ -350,17 +357,16 @@ header {
 i.fa-plus:before { 
    font-size: 1rem;
    margin-left: .6rem;
+   margin-right: .7rem;
    display: flex;
    align-items: center;
 }
 
 /* Separação dos icones */
-i.fa-windows::before { 
+i.fa-github::before {
    margin-left: .7rem;
-}
+   margin-left: 0;
 
-i.fa-github:before {
-   margin-left: .7rem;
 }
 /* Formatação h3 */
 .conhecimento-header h3 { 
@@ -375,10 +381,11 @@ i.fa-github:before {
 .conhecimento-text {
    font-family: var(--font-secundary);
    margin-top: .7rem;
-   color: #555;
+   color: #6a3093;
    transition: 500ms;
    cursor: pointer;
 }
+
 
 .conhecimento-text:hover {
    color: #a044ff;
