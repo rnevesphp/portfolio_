@@ -139,7 +139,7 @@ header {
    line-height: 3.5rem;
    margin-bottom: 1.3rem;
    opacity: 0;
-   animation: moveBanner 2.7s 0.4s forwards;
+   animation: moveBanner 2.7s 0.7s forwards;
 }
 
 /* Formatação do paragrafo */
@@ -167,7 +167,7 @@ header {
    border-radius: 5px;
    cursor: pointer;
    opacity: 0;
-   animation: moveBanner 2.3s 0.9s forwards;
+   animation: moveBanner 2s 0.9s forwards;
 }
 
 /* Animation of button */
@@ -178,7 +178,7 @@ header {
 }
 
 /* Barra de rolagem personalizada */
-/*
+/* 
 ::-webkit-scrollbar { 
    width: 30px;
 }
@@ -425,6 +425,7 @@ i.fa-github::before {
    height: 100%;
    background-color: #262626;
    border-radius: .5rem;
+   
 }
 
 .card-img-wrapper img { 
@@ -433,13 +434,22 @@ i.fa-github::before {
    height: 100%;
    border-radius: .5rem;
    opacity: .8;
+   transition: opacity .7s;
+}
+
+.card:hover .card-img-wrapper img { 
+   opacity: .3;
+
 }
 
 .card-info { 
+   opacity: 0;
+   visibility: hidden;
    position: absolute;
    bottom: 0;
    padding: 2rem;
-   text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .4);
+   text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .4);
+   transition: all .7s;
 }
 
 .card-info h2 { 
@@ -447,13 +457,14 @@ i.fa-github::before {
    font-size: 2rem;
    font-weight: 500;
    color: #eee;
-
+   line-height: 1;
 }
 
 .card-info h3 { 
    font-family: var(--font-primary);
    font-weight: 500;
    color: #ff4081;
+   margin-bottom: 1.5rem;
 }
 
 .card-info p {
@@ -461,5 +472,27 @@ i.fa-github::before {
    color: #eee;
    font-weight: 400;
    width: 80%;
-
+   margin-bottom: 2rem;
 }
+
+.card-info button { 
+   width: 8rem;
+   height: 2.5rem;
+   background: #6a3093;
+   background: -webkit-linear-gradient(to right, #a044ff,#6a3093 ) ;
+   background: linear-gradient(to left, #a044ff,#6a3093 );
+   font-family: var(--font-action);
+   font-size: 1rem;
+   color: #eee;
+   border-radius: .5rem;
+   border: none;
+   box-shadow: 0 .1rem .8rem rgba(0, 0, 0, alpha);
+   cursor: pointer;
+}
+
+.card:hover .card-info { 
+   bottom: 2rem;
+   opacity: 1;
+   visibility: visible;
+}
+
