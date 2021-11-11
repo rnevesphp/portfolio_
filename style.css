@@ -214,6 +214,7 @@ header {
    top: 0;
    right: -20rem;
    transition: all 1s;
+   z-index: 99;
 }
 
 .show-menu .sidebar { 
@@ -323,8 +324,12 @@ header {
 .sessao-header {
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: center;  
 }
+section.sessao-projetos div.sessao-header {
+   background-color: #eee;
+}
+
 /* estilo titulo */
 .sessao-header h1 { 
    font-family: var(--font-primary);
@@ -333,6 +338,7 @@ header {
    border-bottom: hidden ;
    margin-bottom: 1rem;
    transition: 300ms;
+   
 }
 
 .sessao-header h1:hover { 
@@ -397,8 +403,9 @@ i.fa-github::before {
 /* Posicionamento da imagem */
 .conhecimentos-img-wrapper { 
    grid-column: 7 / 11;
-   grid-row: 2 / 6 ;
+   grid-row: 1/ 6 ;
    width: 100%;
+   height: auto;
 }
 
 /* ocupação imagem */
@@ -411,7 +418,7 @@ i.fa-github::before {
 .projetos { 
    display: flex;
    justify-content: space-evenly;
-
+   background-color: #eee;
 }
 
 .card { 
@@ -425,7 +432,6 @@ i.fa-github::before {
    height: 100%;
    background-color: #262626;
    border-radius: .5rem;
-   
 }
 
 .card-img-wrapper img { 
@@ -439,7 +445,6 @@ i.fa-github::before {
 
 .card:hover .card-img-wrapper img { 
    opacity: .3;
-
 }
 
 .card-info { 
@@ -495,4 +500,6 @@ i.fa-github::before {
    opacity: 1;
    visibility: visible;
 }
+
+/*//////////////////////////////////////////////////*/
 
