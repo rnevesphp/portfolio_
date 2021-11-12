@@ -568,8 +568,9 @@ i.fa-github::before {
    font-size: 1rem;
    font-family: var(--font-secundary);
    border-bottom: 2px dotted #636363;
-   outline: none;
    margin: .8rem 0;
+   outline: none;
+   
 }
 
 .input-group textarea {
