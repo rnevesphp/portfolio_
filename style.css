@@ -242,7 +242,7 @@ header {
 }
 
 .menu-link:hover { 
-   color: #6a3093;
+   color: #a044ff;
 }
 
 /* Barra com links das redes sociais */
@@ -256,7 +256,7 @@ header {
 
 /* Formatação icones do menu de naevagação */
 .social-media i{ 
-   background-color: #6a3093; 
+   background-color: #555; 
    color: rgba(255, 255, 255, 1);
    width: 2.5rem;
    height: 2.5rem;
@@ -404,7 +404,7 @@ i.fa-github::before {
 /* Posicionamento da imagem */
 .conhecimentos-img-wrapper { 
    grid-column: 7 / 11;
-   grid-row: 1 / 6 ;
+   grid-row: 2 / 5 ;
    width: 100%;
    
 }
@@ -483,9 +483,7 @@ i.fa-github::before {
    margin-bottom: 2rem;
 }
 
-.card-info button { 
-   width: 8rem;
-   height: 2.5rem;
+.btn {
    background: #6a3093;
    background: -webkit-linear-gradient(to right, #a044ff,#6a3093 ) ;
    background: linear-gradient(to left, #a044ff,#6a3093 );
@@ -496,6 +494,11 @@ i.fa-github::before {
    border: none;
    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, alpha);
    cursor: pointer;
+}
+
+.card-info button { 
+   width: 8rem;
+   height: 2.5rem;
 }
 
 .card:hover .card-info { 
@@ -528,7 +531,6 @@ i.fa-github::before {
       linear-gradient( rgba(15,15,15, 0.6) , rgba(22,22,22,0.9)),
       url(assets/fundoTropical.jpg);
    background-size: cover;
-
 }
 
 .contato-right { 
@@ -560,31 +562,49 @@ i.fa-github::before {
 .field {
    background: transparent;
    border: none;
-   width: 20rem;
+   width: 25rem;
+   max-width: 25rem;
    height: 3rem;
-   font-size: 1.5rem;
+   font-size: 1rem;
    font-family: var(--font-secundary);
-   border-bottom: 2px dashed #636363;
+   border-bottom: 2px dotted #636363;
    outline: none;
-   margin: 1rem 0;
+   margin: .8rem 0;
 }
 
 .input-group textarea {
-   padding-top: 1rem;
+   padding-top: 2rem;
+   min-width: 22.5rem;
+   max-width: 25rem;
+   min-height: 2.5rem;
+   max-height: 3rem;
 }
 
 .field-label { 
    position: absolute;
    left: 0;
+   top: 2rem;
    font-family: var(--font-secundary);
-   font-size: 1.2rem;
+   font-size: 1rem;
    text-transform: uppercase;
-   margin: 2rem;
    justify-content: start;
-   transition: all 0.3s ;
+   transition: all 0.5s ;
 }
 
 .field:focus ~ label { 
    top: 0; 
+   font-size: 1.1rem;
+   font-weight: bolder;
+}
+
+.field:focus { 
+   border-bottom: 1px solid;
+}
+
+.btn-submit {
    font-size: 1rem;
+   text-transform: uppercase;
+   margin-top: 2rem;
+   width: 25rem;
+   height: 2rem;
 }
