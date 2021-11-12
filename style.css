@@ -416,18 +416,24 @@ i.fa-github::before {
    grid-row: 2/ 5 ;
 }
 
+.sessao-projetos { 
+   height: 100vh;
+}
 
 .projetos { 
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
    background-color: #eee;
+   height: 100%;
+   
 }
 
 .card { 
    width: 15rem;
-   height: 25rem;
+   height: 24rem;
    position: relative;
-   margin-bottom: 3rem;
+   margin-top: 2.5rem;
+   margin-bottom: 2.5rem;
 }
 
 .card-img-wrapper { 
