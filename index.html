@@ -31,6 +31,8 @@
             <h1>Técnico de Telecomunicações <br> & Desenvolvedor Front-End em formação</h1>
             <p>Romeu Neves Rabelo</p>
             <a href="/assets/CV_ES_ROMEU_v3.pdf" download="CV_ROMEU_NEVES_ES"><button>Download CV</button></a>
+            <a href="https://github.com/rnevesphp" target="_blank"><button id="btn_banner_perfil">GitHub</button></a>
+
          </div>
       </header>
 
@@ -55,7 +57,6 @@
          <div class="sessao-header">
             <h1>Conhecimentos</h1>
          </div>
-
 
          <div class="conhecimentos">
             <div class="conhecimento">
@@ -187,6 +188,7 @@
 
                </div>
             </div>
+            <!--
             <div class="card">
                <div class="card-img-wrapper">
                   <img src="/assets/hand_holding_sf.png" alt="Pinturilho">
@@ -197,7 +199,7 @@
                   <p>Um quadro para pintar aperfeiçoando a prática Clean Code com Javascript.</p>
                   <button class="btn">Saiba Mais</button>
                </div>
-            </div>
+            </div>-->
             <div class="card">
                <div class="card-img-wrapper">
                   <img src="/assets/calculadora.jpg" alt="Calculadora">
@@ -206,7 +208,8 @@
                   <h2>Calculadora</h2>
                   <h3>HTML, CSS & PHP</h3>
                   <p>Praticando e melhorando as integrações com PHP, HTML e CSS</p>
-                  <button class="btn">Saiba Mais</button>
+                  <a href="https://github.com/rnevesphp/M07_PHP_Exercices/tree/main/UF1/act_007"><button
+                        class="btn">Saiba Mais</button></a>
                </div>
             </div>
          </div>
@@ -235,7 +238,31 @@
             </div>
          </div>
       </section>
-
+      <section class="sessao-orcamento">
+         <div class="orcamento-wrapper">
+            <h1>Faça um orçamento</h1>
+            <form>
+               <label for="qtde">Qtde de Páginas</label>
+               <input type="number" min="1" name="qtde" id="qtde">
+               <label for="js">Preciso de um script JS</label>
+               <input type="checkbox" name="js" id="js">
+               <label>Layout</label>
+               <div class="group-layout">
+                  <div>
+                     <input type="radio" name="layout" id="layout-sim">
+                     <label for="layout-sim">Preciso de um layout</label>
+                  </div>
+                  <div>
+                     <input type="radio" name="layout" id="layout-nao">
+                     <label for="layout-nao">Já tenho um layout</label>
+                  </div>
+               </div>
+               <label for="prazo">Prazo</label>
+               <input type="range" name="prazo" id="prazo">
+               <button class="btn btn-orcamento" type="submit">Enviar</button>
+            </form>
+         </div>
+      </section>
    </div>
 </body>
 <script src="/script.js"></script>
