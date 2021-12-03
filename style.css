@@ -123,8 +123,6 @@ header {
    position: absolute;
    top: 30%;
    left: 15%;
-   /*background-color: rgba(255, 255, 255, 0.100);
-   backdrop-filter: blur(5.5px) ;*/
    border-radius: 10px;  
    animation: moveBanner 2.7s 0.7s forwards;
    padding: 15px;
@@ -181,21 +179,22 @@ header {
    transition: 1s;
 }
 /* Barra de rolagem personalizada */
-/* 
+
 ::-webkit-scrollbar { 
-   width: 30px;
+   width: 15px;
+   background-color: none;
 }
 
 ::-webkit-scrollbar-track { 
-   background-color: #a244ff8a;
-   border-radius:  30px;
+   background-color: #a7a7a7;
+   
 }
 
 ::-webkit-scrollbar-thumb {
    background-color: rgb(255, 255, 255);
-   border-radius: 10px;
+   border-radius: 3px;
 }
-*/
+
 
 /* animation header */
 @keyframes moveBanner { 
@@ -391,7 +390,7 @@ i.fa-github::before {
 .conhecimentos-img-wrapper img { 
    object-fit: cover;
    width: 100%;
-   grid-row: 2/ 5 ;
+   grid-row: 0/ 5 ;
 }
 
 
@@ -574,7 +573,7 @@ i.fa-github::before {
 .sessao-orcamento { 
    width: 100%;
    height: 100vh;
-   background: url("./assets/bg_003.jpg");
+   background: url("./assets/bg_002.jpg");
    object-fit: cover;
    display: flex;
    justify-content: center;
@@ -583,10 +582,11 @@ i.fa-github::before {
 .orcamento-wrapper { 
    width: 60%;
    height: 80%;
-   background-color: #ffffff99;
+   background-color:rgba(255, 255, 255, 0.100);
    border-radius: 10px;
    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
    position: relative;
+   backdrop-filter: blur(8px);
 }
 .sessao-orcamento h1 { 
    position: absolute;
@@ -609,11 +609,14 @@ i.fa-github::before {
    grid-template-columns: auto 1fr;
    column-gap: 2rem;
    row-gap: 2rem;
+   text-transform: uppercase;
+   align-items: center;
 }
 .sessao-orcamento label { 
    font-family: var(--font-secundary);
    font-size: 1.5rem;
    font-weight: bolder;
+   color: #f4f4f4;
 }
 .sessao-orcamento input[type="number"] { 
    font-family: var(--font-secundary);
@@ -669,8 +672,8 @@ footer {
    position: fixed;
    right: 3rem;
    bottom: 3rem;
-   width: 5rem;
-   height: 5rem;
+   width: 3rem;
+   height: 3rem;
    background: #6a3093;  
    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  
    background: linear-gradient(to left, #a044ff, #6a3093); 
@@ -680,4 +683,5 @@ footer {
    color: #fff;
    border-radius: 10px;
    box-shadow: 0 0.1rem 0.6rem #000;
+   cursor: pointer;
 }
