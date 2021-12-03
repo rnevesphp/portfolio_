@@ -276,7 +276,7 @@ header {
 .conhecimentos { 
    display: grid;
    grid-template-columns: repeat(16, 1fr);
-   grid-template-rows: repeat(8, 5.2rem);
+   grid-template-rows: repeat(6, 5.2rem);
    row-gap: .5rem;
 }
 .conhecimento:nth-child(1){ 
@@ -303,10 +303,11 @@ header {
    grid-column: 11/15;
    grid-row: 5/-1;
 }
+/*
 .conhecimento:nth-child(7){ 
    grid-column: 7 / 11 ;
    grid-row: 7/8;
-}
+}*/
 /* Formatação da página */
 .sessao-conhecimentos { 
    background-color: #f4f4f4;
