@@ -496,9 +496,7 @@ i.fa-github::before {
 }
 .contato-left {
    width: 35%;
-   background:  
-      linear-gradient( rgba(15,15,15, 0.6) , rgba(22,22,22,0.9)),
-      url(assets/fundoTropical.jpg);
+   background: linear-gradient( rgba(15,15,15, 0.6) , rgba(22,22,22,0.9)), url(assets/fundoTropical.jpg);
    background-size: cover;
 }
 .contato-right { 
@@ -545,16 +543,15 @@ i.fa-github::before {
 .field-label { 
    position: absolute;
    left: 0;
-   top: 2rem;
    font-family: var(--font-secundary);
-   font-size: 1rem;
+   font-size: 1.2rem;
    text-transform: uppercase;
    justify-content: start;
    transition: all 0.5s ;
 }
 .field:focus ~ label { 
    top: 0; 
-   font-size: 1.1rem;
+   font-size: 1.3rem;
    font-weight: bolder;
 }
 .field:focus { 
