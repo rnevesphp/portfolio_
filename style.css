@@ -1,30 +1,39 @@
-
 /* <==================SESSAO-DEFINIDOS_COMUNS======================>*/
 /* FONTES */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;800&family=Josefin+Slab:ital,wght@0,100;0,500;0,600;1,100;1,200;1,700&family=Mulish:ital,wght@0,200;0,400;0,600;1,200;1,300;1,600&display=swap');
 /* FONT AWESOME */ 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"); 
+
 * {
    margin: 0;
    padding: 0;
    list-style: none;
    text-decoration: none;
 }
-
 :root { 
    --font-primary: "Baloo Da 2"; 
    --font-secundary: "Josefin Slab";
    --font-action: "Mulish"; 
 }
-
 html { 
    scroll-behavior: smooth;
 }
-
 body {
    font-size: 16px;
 }
+/* Barra de rolagem personalizada */
+::-webkit-scrollbar { 
+   width: 15px;
+   background-color: none;
+}
+::-webkit-scrollbar-track { 
+   background-color: #a7a7a7;
 
+}
+::-webkit-scrollbar-thumb {
+   background-color: rgb(255, 255, 255);
+   border-radius: 3px;
+}
 
 /* <==================SESSAO-SIDEBAR1======================>*/
 /* Formatação barras --> menu */ 
@@ -178,24 +187,6 @@ header {
    color: #000;
    transition: 1s;
 }
-/* Barra de rolagem personalizada */
-
-::-webkit-scrollbar { 
-   width: 15px;
-   background-color: none;
-}
-
-::-webkit-scrollbar-track { 
-   background-color: #a7a7a7;
-   
-}
-
-::-webkit-scrollbar-thumb {
-   background-color: rgb(255, 255, 255);
-   border-radius: 3px;
-}
-
-
 /* animation header */
 @keyframes moveBanner { 
    0% {
@@ -204,10 +195,8 @@ header {
    100% {
       transform: translateY(0) rotateY(0);
       opacity: 1; 
-      
    }  
 }
-
 
 /* <==================SESSAO-SIDEBAR======================>*/
 /* Formatação do menu de navegação */
@@ -244,32 +233,21 @@ header {
 .menu-link:hover { 
    color: #a044ff;
 }
-/* Barra com links das redes sociais */
-.social-media { 
+.idiomas { 
    position: absolute;
    bottom: 2rem;
    width: 100%;
    display: flex;
    justify-content: space-evenly;  
 }
-/* Formatação icones do menu de naevagação */
-.social-media i{ 
-   background-color: #555; 
-   color: rgba(255, 255, 255, 1);
+.idiomas img{ 
+   background-color: #17181b; 
    width: 2.5rem;
    height: 2.5rem;
-   font-size: 1.5rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
    border-radius: 50%;
-   transition: background-color 0.8s;
+   transition: color 19s;
+   cursor: pointer;
 }
-/* formatação efeito barras  */
-.social-media i:hover { 
-   background-color: #a044ff;
-}
-
 /* <==================SESSAO-CONHECIMENTO======================>*/
  /* Posicionamento dos conhecimentos */
 .conhecimentos { 
@@ -302,11 +280,6 @@ header {
    grid-column: 11/15;
    grid-row: 5/-1;
 }
-/*
-.conhecimento:nth-child(7){ 
-   grid-column: 7 / 11 ;
-   grid-row: 7/8;
-}*/
 /* Formatação da página */
 .sessao-conhecimentos { 
    background-color: #f4f4f4;
